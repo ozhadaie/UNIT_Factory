@@ -1,0 +1,16 @@
+#!/bin/bash
+
+CF=/root/hash.md5
+
+if [ -e $CF ]
+then
+	if ! md5sum -c $CF
+	then
+		echo "$CF modified, this action will reported to admin" | mail -s "Modified" root
+		md5sum /etc/crontab > $CF
+	fi
+else
+	md5sum /etc/crontab > $CF
+fi
+
+# add '@midnight $CF' in crontab file

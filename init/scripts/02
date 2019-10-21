@@ -1,0 +1,7 @@
+#!/bin/bash
+OUT=/var/log/update_script.log
+apt-get update >> $OUT
+apt-get upgrade >> $OUT
+
+crontab -e
+#'0 4 * * 1 /root/$0' in crontab file.

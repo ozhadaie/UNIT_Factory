@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]
+then
+	if [ -d $1 ]
+	then
+		ls -lS $1
+	else
+		echo "No such directory"
+	fi
+else
+	echo "$0 [dir_name]"
+fi

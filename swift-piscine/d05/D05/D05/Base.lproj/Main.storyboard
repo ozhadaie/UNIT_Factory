@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="D05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-b3-IhP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" textLabel="Q32-Nw-z2V" rowHeight="330" style="IBUITableViewCellStyleDefault" id="YHM-dY-SSs">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="330"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHM-dY-SSs" id="MJR-T2-eAg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="329.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q32-Nw-z2V">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="329.66666666666669"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="hOc-xu-9b0"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="zVb-8o-e09"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n0a-b3-IhP" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" id="fxd-9Q-UNh"/>
+                            <constraint firstItem="n0a-b3-IhP" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" id="mhX-jz-azC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="icons8-list-24" selectedImage="icons8-list-24" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="n0a-b3-IhP" id="TuN-bk-Fh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="D05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RGo-rn-9vD">
+                                <rect key="frame" x="0.0" y="-19.666666666666686" width="414" height="896.33333333333348"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="3cC-0z-TOV"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ffn-xF-RTg">
+                                <rect key="frame" x="101" y="764" width="212" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="XaB-iy-7Os"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-RN-fYL">
+                                <rect key="frame" x="342" y="764" width="33" height="33"/>
+                                <state key="normal" image="icons8-user-location-48"/>
+                                <connections>
+                                    <action selector="goToCurrentLocation:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="mOZ-KR-ykZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGo-rn-9vD" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="2pE-CV-JAX"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="ffn-xF-RTg" secondAttribute="bottom" constant="20" id="BSc-kC-1XM"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="8H7-RN-fYL" secondAttribute="bottom" constant="18" id="DoL-Kx-Jga"/>
+                            <constraint firstItem="RGo-rn-9vD" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="QsV-Jl-gm3"/>
+                            <constraint firstItem="RGo-rn-9vD" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" id="XbP-HR-shs"/>
+                            <constraint firstItem="ffn-xF-RTg" firstAttribute="centerX" secondItem="RGo-rn-9vD" secondAttribute="centerX" id="nEe-Y0-dTW"/>
+                            <constraint firstItem="8H7-RN-fYL" firstAttribute="leading" secondItem="ffn-xF-RTg" secondAttribute="trailing" constant="29" id="tVg-ln-8fm"/>
+                            <constraint firstItem="RGo-rn-9vD" firstAttribute="centerY" secondItem="O1u-W8-tvY" secondAttribute="centerY" id="zjh-dF-m6K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="icons8-map-marker-24" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="currentLocation" destination="8H7-RN-fYL" id="aDt-TS-8p0"/>
+                        <outlet property="mapView" destination="RGo-rn-9vD" id="nZG-dE-LOm"/>
+                        <outlet property="typeBar" destination="ffn-xF-RTg" id="Fll-ny-btp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-list-24" width="24" height="24"/>
+        <image name="icons8-map-marker-24" width="24" height="24"/>
+        <image name="icons8-user-location-48" width="48" height="48"/>
+    </resources>
+</document>
